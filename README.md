@@ -1,64 +1,28 @@
-# Jelly Frontend Technical Test
+# Technical Test
 
-## Task overview
-Develop a web-app that displays a list of Marvel characters and their details using the Marvel API (https://developer.marvel.com/).
-Project already contains material UI library installed. You can refer documentation here: https://mui.com/material-ui/getting-started/
+## Objective
+Develop a web-app that allows users to search for marvel characters. 
 
-# Requirements:
-The application should consist of two pages:
+## Requirements:
+1. On home page, show a simple search box where user can start typing character name.
+2. On text change, call marvel API to search character and display character names in a list.
+3. If user clicks on any name in the list, navigate them to a new page to display character details. Show basic information like the selected character's details, such as name, description, and additional information
 
-## Character List page:
-Displays a list of Marvel characters with their names and thumbnail images
+To save your time, we have already setup marvel developer account and added a function named fetchData in src/lib/marvel.js, 
+which calls marvel API and get search results. Feel free to modify as required.
+Also, project already contains material UI library installed. Feel free to use any UI library you are comfortable with.
 
-## Character Detail page:
-Shows the selected character's details, such as name, description, and additional information
+## Bonus points:
+1. As marvel API is restricted to 3000 calls per day, you can implement logic to reduce number of API calls from the application to marvel.
+2. Convert code in marvel.js to typescript
+3. Any other suggestion to improve the code or product.
 
-# Additional Information:
-To retrieve the necessary data, you will need to acquire an API key from the Marvel Developer Portal (https://developer.marvel.com/). This API key will grant you access to the Marvel API, enabling you to fetch the required information for your application.
+## Setup instructions:
+1. Fork repo and install dependencies (`yarn install`)
+2. Ask interviewer for environment variables and setup .env file
+3. Start server (`yarn start`) and start coding
+4. Push code to forked repo and share link with the interviewer
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Resources:
+1. [Marvel developer docs](https://developer.marvel.com/)
+2. [Material UI docs](https://mui.com/material-ui/getting-started/)
