@@ -11,8 +11,15 @@ export const fetchData = async (searchTerm) => {
       `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${term}&apikey=${publicKey}&hash=${hash}`
     );
     const data = await res.json();
-    console.log(data.data.results);
-    return data.data.results;
+
+    return data.data.results.map((rawCharacter) => {
+      const character = {
+        id: rawCharacter.id,
+        name: rawCharacter.name,
+        description: rawCharacter.description,
+      };
+      return character;
+    });
   } catch (error) {
     console.log("Error fetching data. ", error);
   }
